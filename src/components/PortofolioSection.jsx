@@ -1,7 +1,7 @@
 import { Image, Box } from "@chakra-ui/react"
 import CirclePink from "assets/images/circle-pink.png"
 import CircleYellow from "assets/images/circle-yellow.png"
-import CardPorto1 from "assets/images/card-porto.svg"
+import PortofolioAPI from "backend/portofolio"
 
 const PortofolioSection = () => {
   return (
@@ -29,16 +29,16 @@ const PortofolioSection = () => {
         </div>
 
         <div className="grid-12 tw-gap-10">
-         
-          <div className="tw-col-start-2 tw-col-span-10">
-            <Image
-              src={CardPorto1}
-              objectFit={"contain"}
-              alt="CardPorto1"
-              width={"full"}
-            />
-          </div>
-      
+          {PortofolioAPI.map((item, key) => (
+            <div className="tw-col-start-2 tw-col-span-10" key={key}>
+              <Image
+                src={item.image}
+                objectFit={"contain"}
+                alt={item.alt}
+                width={"full"}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </>
