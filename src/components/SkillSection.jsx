@@ -2,8 +2,6 @@ import { Image, Box } from "@chakra-ui/react"
 import CirclePink from "assets/images/circle-pink.png"
 import CircleYellow from "assets/images/circle-yellow.png"
 import Bintang from "assets/images/bintang.png"
-import Bunga from "assets/images/bunga.png"
-import Kodok from "assets/images/kodok.png"
 import SkillAPI from "backend/skill"
 import { useOutletContext } from "react-router-dom"
 
@@ -56,13 +54,16 @@ const SkillSection = () => {
                     <div className="fc tw-gap-3 tw-mb-2">
                       <div className="subtitle-skill">Level :</div>
                       <div className="fcc tw-gap-2">
-                        {[...Array(item.level)].map((x, i) => (
+                        {[...Array(6)].map((x, i) => (
                           <Image
                             key={i}
                             src={Bintang}
                             objectFit={"contain"}
                             boxSize="25px"
                             alt="Bintang"
+                            filter={
+                              i + 1 > item.level ? "grayscale(100%)" : null
+                            }
                           />
                         ))}
                       </div>
@@ -72,10 +73,10 @@ const SkillSection = () => {
 
                   <div className="img-skill-br">
                     <Image
-                      src={Kodok}
+                      src={item.image}
                       objectFit={"contain"}
                       boxSize="80px"
-                      alt="Kodok"
+                      alt={`image-${key}`}
                     />
                   </div>
                 </Box>
@@ -95,13 +96,16 @@ const SkillSection = () => {
                     <div className="fc tw-gap-3 tw-mb-2">
                       <div className="subtitle-skill">Level :</div>
                       <div className="fcc tw-gap-2">
-                        {[...Array(item.level)].map((x, i) => (
+                        {[...Array(6)].map((x, i) => (
                           <Image
                             key={i}
                             src={Bintang}
                             objectFit={"contain"}
                             boxSize="25px"
                             alt="Bintang"
+                            filter={
+                              i + 1 > item.level ? "grayscale(100%)" : null
+                            }
                           />
                         ))}
                       </div>
@@ -111,10 +115,10 @@ const SkillSection = () => {
 
                   <div className="img-skill-tr">
                     <Image
-                      src={Bunga}
+                      src={item.image}
                       objectFit={"contain"}
                       boxSize="80px"
-                      alt="Bunga"
+                      alt={`image-${key}`}
                     />
                   </div>
                 </Box>
