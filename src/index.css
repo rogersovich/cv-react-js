@@ -1,13 +1,72 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "LilitaOne-Regular";
+  src: local("LilitaOne-Regular"),
+    url("./assets/fonts/LilitaOne-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat-ExtraBold";
+  src: local("Montserrat-ExtraBold"),
+    url("./assets/fonts/Montserrat-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: local("Montserrat-SemiBold"),
+    url("./assets/fonts/Montserrat-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: local("Montserrat-Bold"),
+    url("./assets/fonts/Montserrat-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: local("Montserrat-Medium"),
+    url("./assets/fonts/Montserrat-Medium.ttf") format("truetype");
+}
+
+.font-lilita-one {
+  font-family: "LilitaOne-Regular";
+}
+
+.font-montserrat-extrabold {
+  font-family: "Montserrat-ExtraBold";
+}
+
+.font-montserrat-medium {
+  font-family: "Montserrat-Medium";
+}
+
+.font-montserrat-bold {
+  font-family: "Montserrat-Bold";
+}
+
+.font-montserrat-semibold {
+  font-family: "Montserrat-SemiBold";
+}
+
+.title-skill {
+  color: #ff6330;
+  font-family: "Montserrat-Bold";
+  font-size: 40px;
+  letter-spacing: 0.07em;
+  line-height: 1.5;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    4px 4px 0 #000;
+}
+
+.subtitle-skill {
+  font-family: "Montserrat-Bold";
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.desc-skill {
+  font-family: "Montserrat-Medium";
+  font-size: 16px;
 }
