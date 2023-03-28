@@ -30,7 +30,7 @@ const PortofolioSection = () => {
           />
         </div>
 
-        <div className="grid-12 tw-gap-10">
+        <div className="grid-12 tw-gap-y-10">
           {PortofolioAPI.map((item, key) => (
             <div className="tw-col-start-2 tw-col-span-10" key={key}>
               <Image
