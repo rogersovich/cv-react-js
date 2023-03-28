@@ -1,15 +1,17 @@
 import Crown from "assets/images/crown-il.svg"
-import Github from "assets/images/github.png"
-import Email from "assets/images/email.png"
-import Wa from "assets/images/wa.png"
-import Linkedin from "assets/images/linkedin.png"
 import HeroRight from "assets/images/hero-right.svg"
 import { Image, Button } from "@chakra-ui/react"
+import { socialMedia } from "backend/home"
 
 const HomeSection = () => {
+
+  const routeSocialMedia = (type) => {
+    alert(type)
+  }
+
   return (
     <>
-      <div className="tw-py-20">
+      <div className="tw-py-16">
         <div className="grid-2 tw-gap-4">
           <div className="tw-text-center">
             <div className="fcc">
@@ -24,9 +26,9 @@ const HomeSection = () => {
               <Button
                 bgColor={"#FF6330"}
                 color={"white"}
-                size={"lg"}
-                px={"16"}
-                fontSize={"xl"}
+                height={"14"}
+                px={"20"}
+                fontSize={"24px"}
                 letterSpacing={"widest"}
                 _hover={{ bg: "#FF6330", transform: "scale(1.1)" }}
                 _active={{ bg: "#FF6330" }}
@@ -40,10 +42,16 @@ const HomeSection = () => {
             </div>
             <br />
             <div className="fcc tw-gap-4">
-              <Image src={Github} alt="Github" height={"10"} />
-              <Image src={Linkedin} alt="Linkedin" height={"10"} />
-              <Image src={Wa} alt="Wa" height={"10"} />
-              <Image src={Email} alt="Email" height={"10"} />
+              {socialMedia.map((item, key) => (
+                <Image
+                  key={key}
+                  src={item.image}
+                  alt={item.alt}
+                  height={"10"}
+                  _hover={{ cursor: "pointer", transform: "scale(1.2)" }}
+                  onClick={() => routeSocialMedia(item.alt)}
+                />
+              ))}
             </div>
           </div>
           <div>
@@ -51,7 +59,7 @@ const HomeSection = () => {
               <Image
                 src={HeroRight}
                 objectFit={"contain"}
-                height={"600px"}
+                height={"700px"}
                 alt="HeroRight"
               />
             </div>

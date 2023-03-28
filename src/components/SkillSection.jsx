@@ -4,8 +4,12 @@ import CircleYellow from "assets/images/circle-yellow.png"
 import Bintang from "assets/images/bintang.png"
 import Bunga from "assets/images/bunga.png"
 import Kodok from "assets/images/kodok.png"
+import SkillAPI from "backend/skill"
 
 const SkillSection = () => {
+  const isOdd = (num) => {
+    return num % 2
+  }
   return (
     <>
       <div className="tw-py-20 tw-px-4">
@@ -34,106 +38,87 @@ const SkillSection = () => {
         <br />
         <br />
         <div className="grid-2 tw-gap-10">
-          <div>
-            <Box
-              border={"2px"}
-              borderColor={"black"}
-              boxShadow={"6px 6px 0px #000000"}
-              px={6}
-              py={6}
-              className="tw-relative"
-            >
-              <div>
-                <div className="title-skill">Laravel</div>
-                <div className="fc tw-gap-3 tw-mb-2">
-                  <div className="subtitle-skill">Level :</div>
-                  <div className="fcc tw-gap-2">
+          {SkillAPI.map((item, key) =>
+            isOdd(key + 1) !== 1 ? (
+              <div key={key}>
+                <Box
+                  border={"2px"}
+                  borderColor={"black"}
+                  boxShadow={"6px 6px 0px #000000"}
+                  px={6}
+                  py={6}
+                  className="tw-relative"
+                >
+                  <div>
+                    <div className="title-skill">{item.name}</div>
+                    <div className="fc tw-gap-3 tw-mb-2">
+                      <div className="subtitle-skill">Level :</div>
+                      <div className="fcc tw-gap-2">
+                        {[...Array(item.level)].map((x, i) => (
+                          <Image
+                            key={i}
+                            src={Bintang}
+                            objectFit={"contain"}
+                            boxSize="25px"
+                            alt="Bintang"
+                          />
+                        ))}
+                      </div>
+                    </div>
+                    <div className="desc-skill">{item.desc}</div>
+                  </div>
+
+                  <div className="img-skill-br">
                     <Image
-                      src={Bintang}
+                      src={Kodok}
                       objectFit={"contain"}
-                      boxSize="22px"
-                      alt="Bintang"
-                    />
-                    <Image
-                      src={Bintang}
-                      objectFit={"contain"}
-                      boxSize="22px"
-                      alt="Bintang"
-                    />
-                    <Image
-                      src={Bintang}
-                      objectFit={"contain"}
-                      boxSize="22px"
-                      alt="Bintang"
+                      boxSize="80px"
+                      alt="Kodok"
                     />
                   </div>
-                </div>
-                <div className="desc-skill">
-                  Disini isi tentang perjalanan laravel kita dan bagaimana saya
-                  bisa laravel
-                </div>
+                </Box>
               </div>
+            ) : (
+              <div key={key}>
+                <Box
+                  border={"2px"}
+                  borderColor={"black"}
+                  boxShadow={"6px 6px 0px #000000"}
+                  px={6}
+                  py={6}
+                  className="tw-relative"
+                >
+                  <div>
+                    <div className="title-skill">{item.name}</div>
+                    <div className="fc tw-gap-3 tw-mb-2">
+                      <div className="subtitle-skill">Level :</div>
+                      <div className="fcc tw-gap-2">
+                        {[...Array(item.level)].map((x, i) => (
+                          <Image
+                            key={i}
+                            src={Bintang}
+                            objectFit={"contain"}
+                            boxSize="25px"
+                            alt="Bintang"
+                          />
+                        ))}
+                      </div>
+                    </div>
+                    <div className="desc-skill">{item.desc}</div>
+                  </div>
 
-              <div className="img-skill-tr">
-                <Image
-                  src={Bunga}
-                  objectFit={"contain"}
-                  boxSize="80px"
-                  alt="Bunga"
-                />
-              </div>
-            </Box>
-          </div>
-          <div>
-            <Box
-              border={"2px"}
-              borderColor={"black"}
-              boxShadow={"6px 6px 0px #000000"}
-              px={6}
-              py={6}
-              className="tw-relative"
-            >
-              <div>
-                <div className="title-skill">Vue JS</div>
-                <div className="fc tw-gap-3 tw-mb-2">
-                  <div className="subtitle-skill">Level :</div>
-                  <div className="fcc tw-gap-2">
+                  <div className="img-skill-tr">
                     <Image
-                      src={Bintang}
+                      src={Bunga}
                       objectFit={"contain"}
-                      boxSize="22px"
-                      alt="Bintang"
-                    />
-                    <Image
-                      src={Bintang}
-                      objectFit={"contain"}
-                      boxSize="22px"
-                      alt="Bintang"
-                    />
-                    <Image
-                      src={Bintang}
-                      objectFit={"contain"}
-                      boxSize="22px"
-                      alt="Bintang"
+                      boxSize="80px"
+                      alt="Bunga"
                     />
                   </div>
-                </div>
-                <div className="desc-skill">
-                  Disini isi tentang perjalanan laravel kita dan bagaimana saya
-                  bisa laravel
-                </div>
+                </Box>
               </div>
-
-              <div className="img-skill-br">
-                <Image
-                  src={Kodok}
-                  objectFit={"contain"}
-                  boxSize="80px"
-                  alt="Kodok"
-                />
-              </div>
-            </Box>
-          </div>
+            )
+          )}
         </div>
       </div>
     </>
