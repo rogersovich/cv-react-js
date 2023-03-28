@@ -2,16 +2,17 @@ import Crown from "assets/images/crown-il.svg"
 import HeroRight from "assets/images/hero-right.svg"
 import { Image, Button } from "@chakra-ui/react"
 import { socialMedia } from "backend/home"
+import { useOutletContext } from "react-router-dom"
 
 const HomeSection = () => {
-
+  const { homeRef } = useOutletContext()
   const routeSocialMedia = (type) => {
     alert(type)
   }
 
   return (
     <>
-      <div className="tw-py-16">
+      <div ref={homeRef} className="tw-py-16">
         <div className="grid-2 tw-gap-4">
           <div className="tw-text-center">
             <div className="fcc">

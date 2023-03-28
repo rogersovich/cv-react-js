@@ -2,11 +2,13 @@ import { Image, Box } from "@chakra-ui/react"
 import CirclePink from "assets/images/circle-pink.png"
 import CircleYellow from "assets/images/circle-yellow.png"
 import PortofolioAPI from "backend/portofolio"
+import { useOutletContext } from "react-router-dom"
 
 const PortofolioSection = () => {
+  const { portofolioRef } = useOutletContext()
   return (
     <>
-      <div className="tw-py-20 tw-px-4">
+      <div ref={portofolioRef} className="tw-py-20 tw-px-4">
         <div className="fcc tw-gap-8 tw-mb-20">
           <Image
             src={CirclePink}

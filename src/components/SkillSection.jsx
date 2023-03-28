@@ -5,14 +5,16 @@ import Bintang from "assets/images/bintang.png"
 import Bunga from "assets/images/bunga.png"
 import Kodok from "assets/images/kodok.png"
 import SkillAPI from "backend/skill"
+import { useOutletContext } from "react-router-dom"
 
 const SkillSection = () => {
+  const { skillRef } = useOutletContext()
   const isOdd = (num) => {
     return num % 2
   }
   return (
     <>
-      <div className="tw-py-20 tw-px-4">
+      <div ref={skillRef} className="tw-py-20 tw-px-4">
         <div className="fcb">
           <div className="fc tw-gap-1.5 font-lilita-one tw-text-[40px] tw-tracking-wide">
             <div>Wanna See</div>

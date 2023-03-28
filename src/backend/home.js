@@ -21,3 +21,18 @@ export const socialMedia = [
     image: Email
   },
 ]
+
+export const navbarData = [
+  {
+    name: 'Home',
+  },
+  {
+    name: 'Skill',
+  },
+  {
+    name: 'Portofolio',
+  },
+  {
+    name: 'Contact',
+  },
+]
