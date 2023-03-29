@@ -7,7 +7,18 @@ import { useOutletContext } from "react-router-dom"
 const HomeSection = () => {
   const { homeRef } = useOutletContext()
   const routeSocialMedia = (type) => {
-    alert(type)
+    if (type === "Github") {
+      window.open("https://github.com/rogersovich", "_blank")
+    } else if (type === "Linkedin") {
+      window.open(
+        "https://www.linkedin.com/in/dimas-roger-9b93491a1/",
+        "_blank"
+      )
+    } else if (type === "Email") {
+      window.open("mailto:dimasroger89@gmail.com", "_blank")
+    } else {
+      window.open("https://api.whatsapp.com/send?phone=6289627210822&text=Hellow", "_blank")
+    }
   }
 
   return (
