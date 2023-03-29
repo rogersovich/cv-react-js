@@ -1,16 +1,12 @@
-import { Image, Box, Button } from "@chakra-ui/react"
+import { Image, Box } from "@chakra-ui/react"
 import CirclePink from "assets/images/circle-pink.png"
 import CircleYellow from "assets/images/circle-yellow.png"
 import PortofolioAPI from "backend/portofolio"
-import { useOutletContext, Link } from "react-router-dom"
+import { useOutletContext } from "react-router-dom"
+import ContactSection from "components/ContactSection"
 
-const PortofolioSection = () => {
+const Portofolio = () => {
   const { portofolioRef } = useOutletContext()
-
-  const filterAPI = () => {
-    return PortofolioAPI.filter((item) => item.onBoarding)
-  }
-
   return (
     <>
       <div ref={portofolioRef} className="tw-py-20 tw-px-4">
@@ -36,7 +32,7 @@ const PortofolioSection = () => {
         </div>
 
         <div className="grid-12 tw-gap-y-10">
-          {filterAPI().map((item, key) => (
+          {PortofolioAPI.map((item, key) => (
             <div className="tw-col-start-2 tw-col-span-10" key={key}>
               <Image
                 src={item.image}
@@ -47,32 +43,10 @@ const PortofolioSection = () => {
             </div>
           ))}
         </div>
-        <br />
-        <br />
-        <br />
-        <div className="tw-text-center">
-          <Link to={'portofolio'}>
-            <Button
-              bgColor={"#FF6330"}
-              color={"white"}
-              height={"14"}
-              px={"16"}
-              fontSize={"22px"}
-              letterSpacing={"widest"}
-              _hover={{ bg: "#FF6330", transform: "scale(1.1)" }}
-              _active={{ bg: "#FF6330" }}
-              border={"2px"}
-              borderColor={"black"}
-              boxShadow={"4px 4px 0px #000000"}
-              className="upper font-montserrat-bold"
-            >
-              Lihat Semuanya
-            </Button>
-          </Link>
-        </div>
       </div>
+      <ContactSection></ContactSection>
     </>
   )
 }
 
-export default PortofolioSection
+export default Portofolio

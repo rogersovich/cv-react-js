@@ -36,3 +36,15 @@ export const navbarData = [
     name: 'Contact',
   },
 ]
+
+export const navbarPortofolio = [
+  {
+    name: 'Kembali',
+  },
+  {
+    name: 'Portofolio',
+  },
+  {
+    name: 'Contact',
+  },
+]
