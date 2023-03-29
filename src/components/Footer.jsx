@@ -5,6 +5,7 @@ import Icon2 from "assets/images/footer-3.png"
 import { withBreakpoints } from "react-breakpoints"
 
 const Footer = (props) => {
+  console.log('test')
   const d = new Date()
   let year = d.getFullYear()
   const { breakpoints, currentBreakpoint } = props
