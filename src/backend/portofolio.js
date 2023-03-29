@@ -16,7 +16,7 @@ import CP15 from "assets/images/porto/cp-15.svg"
 import CP16 from "assets/images/porto/cp-16.svg"
 import CP17 from "assets/images/porto/cp-17.svg"
 import CP18 from "assets/images/porto/cp-18.svg"
-import CP19 from "assets/images/porto/cp-19.svg"
+import CP19 from "assets/images/porto/cp-lms.svg"
 
 const PortofolioAPI = [
   {
@@ -110,7 +110,7 @@ const PortofolioAPI = [
     onBoarding: false
   },
   {
-    alt: "test",
+    alt: "sininis-lms",
     image: CP19,
     onBoarding: false
   },
