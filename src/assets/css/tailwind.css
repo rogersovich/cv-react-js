@@ -45,17 +45,16 @@
   } */
 
   li {
-    @apply tw-mb-2
+    @apply tw-mb-2;
   }
 
   ul {
-    @apply tw-pl-2
+    @apply tw-pl-2;
   }
 
   img {
-    @apply tw-block tw-object-cover
+    @apply tw-block tw-object-cover;
   }
-
 
   .text-btn-super-small {
     @apply tw-text-xs tw-tracking-wider tw-font-medium;
@@ -145,46 +144,57 @@
     @apply tw-text-lg tw-font-normal tw-mb-1.5;
   }
   .text-sm-desktop {
-    @apply tw-text-xs md:tw-text-sm
+    @apply tw-text-xs md:tw-text-sm;
   }
   .text-base-desktop {
-    @apply tw-text-sm md:tw-text-base
+    @apply tw-text-sm md:tw-text-base;
   }
   .text-lg-desktop {
-    @apply tw-text-base md:tw-text-lg
+    @apply tw-text-base md:tw-text-lg;
   }
   .text-xl-desktop {
-    @apply tw-text-lg md:tw-text-xl
+    @apply tw-text-lg md:tw-text-xl;
   }
   .label-btn {
-    @apply tw-font-normal tw-tracking-wider 
+    @apply tw-font-normal tw-tracking-wider;
   }
   .label-btn-bold {
-    @apply tw-font-semibold tw-tracking-wider
+    @apply tw-font-semibold tw-tracking-wider;
   }
   .capital {
-    @apply tw-capitalize
+    @apply tw-capitalize;
   }
   .upper {
-    @apply tw-uppercase
+    @apply tw-uppercase;
   }
   .italic {
-    @apply tw-italic
+    @apply tw-italic;
   }
   .bold {
-    @apply tw-font-bold
+    @apply tw-font-bold;
   }
   .medium {
-    @apply tw-font-medium
+    @apply tw-font-medium;
   }
   .semibold {
-    @apply tw-font-semibold
+    @apply tw-font-semibold;
   }
   .img-skill-tr {
-    @apply tw-absolute tw-z-10 tw--top-8 tw--right-8
+    @apply tw-absolute tw-z-10 md:tw--top-8 tw--top-6 md:tw--right-8 tw--right-6;
   }
   .img-skill-br {
-    @apply tw-absolute tw-z-10 tw--bottom-8 tw--right-8
+    @apply tw-absolute tw-z-10 md:tw--bottom-8 md:tw--right-8 tw--bottom-6 tw--right-6;
+  }
+  .desc-skill {
+    @apply tw-text-[12px] md:tw-text-[16px] tw-whitespace-pre-line;
+  }
+
+  .subtitle-skill {
+    @apply tw-text-[16px] md:tw-text-[20px] tw-leading-[1.25];
+  }
+
+  .title-skill {
+    @apply tw-text-[25px] md:tw-text-[40px] tw-leading-[1.5] tw-text-[#ff6330] tw-tracking-[0.07em];
   }
 }
 
@@ -215,7 +225,7 @@ hr {
 
 .dotted {
   display: list-item; /* This has to be "list-item"                                          */
-  margin-left : 1em; 
+  margin-left: 1em;
 }
 
 /* sans */

@@ -3,6 +3,9 @@ import { navbarData, navbarPortofolio } from "backend/home"
 import { useLocation, Link } from "react-router-dom"
 import { TbArrowLeft } from "react-icons/tb"
 
+// breakpoint
+import { withBreakpoints } from "react-breakpoints"
+
 const Navbar = (props) => {
   const { pathname } = useLocation()
 
@@ -27,6 +30,10 @@ const Navbar = (props) => {
     }
   }
 
+  const { breakpoints, currentBreakpoint } = props
+  const isMobileLS =
+    breakpoints[currentBreakpoint] < breakpoints.mobileLandscape
+
   return (
     <>
       <div className="fcc tw-sticky tw-z-20 tw-top-4 tw-left-0">
@@ -41,14 +48,14 @@ const Navbar = (props) => {
             <div className="grid-12 tw-gap-4 tw-text-[24px] tw-text-center">
               {navbarPortofolio.map((item, key) =>
                 key === 0 ? (
-                  <div className="tw-col-start-4 tw-col-span-2 fcc" key={key}>
+                  <div className="tw-col-start-2 md:tw-col-start-4 md:tw-col-span-2 tw-col-span-4 fcc" key={key}>
                     <Link to={'/'} className="fcc">
                       <Button
-                        leftIcon={<TbArrowLeft size={"28"} />}
+                        leftIcon={<TbArrowLeft size={isMobileLS ? "18" : "28"} />}
                         color={"black"}
                         variant={"link"}
                         letterSpacing="wider"
-                        fontSize={"2xl"}
+                        fontSize={isMobileLS ? "13px" :"2xl"}
                         fontWeight={"normal"}
                         onClick={() => scrollToView(item.name)}
                       >
@@ -57,12 +64,12 @@ const Navbar = (props) => {
                     </Link>
                   </div>
                 ) : (
-                  <div className="tw-col-span-2 fcc" key={key}>
+                  <div className="md:tw-col-span-2 tw-col-span-3 fcc" key={key}>
                     <Button
                       color={"black"}
                       variant={"link"}
                       letterSpacing="wider"
-                      fontSize={"2xl"}
+                      fontSize={isMobileLS ? "13px" :"2xl"}
                       fontWeight={"normal"}
                       onClick={() => scrollToView(item.name)}
                     >
@@ -73,15 +80,15 @@ const Navbar = (props) => {
               )}
             </div>
           ) : (
-            <div className="grid-12 tw-gap-4 tw-text-[24px] tw-text-center">
+            <div className="grid-12 md:tw-gap-4 tw-text-[24px] tw-text-center">
               {navbarData.map((item, key) =>
                 key === 0 ? (
-                  <div className="tw-col-start-3 tw-col-span-2 fcc" key={key}>
+                  <div className="tw-col-start-1 md:tw-col-start-3 md:tw-col-span-2 tw-col-span-3 fcc" key={key}>
                     <Button
                       color={"black"}
                       variant={"link"}
                       letterSpacing="wider"
-                      fontSize={"2xl"}
+                       fontSize={isMobileLS ? "13px" :"2xl"}
                       fontWeight={"normal"}
                       onClick={() => scrollToView(item.name)}
                     >
@@ -89,12 +96,12 @@ const Navbar = (props) => {
                     </Button>
                   </div>
                 ) : (
-                  <div className="tw-col-span-2 fcc" key={key}>
+                  <div className="tw-col-span-3 md:tw-col-span-2 fcc" key={key}>
                     <Button
                       color={"black"}
                       variant={"link"}
                       letterSpacing="wider"
-                      fontSize={"2xl"}
+                       fontSize={isMobileLS ? "13px" :"2xl"}
                       fontWeight={"normal"}
                       onClick={() => scrollToView(item.name)}
                     >
@@ -111,4 +118,4 @@ const Navbar = (props) => {
   )
 }
 
-export default Navbar
+export default withBreakpoints(Navbar)

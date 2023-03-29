@@ -3,8 +3,10 @@ import HeroRight from "assets/images/hero-right.svg"
 import { Image, Button } from "@chakra-ui/react"
 import { socialMedia } from "backend/home"
 import { useOutletContext } from "react-router-dom"
+// breakpoint
+import { withBreakpoints } from "react-breakpoints"
 
-const HomeSection = () => {
+const HomeSection = (props) => {
   const { homeRef } = useOutletContext()
   const routeSocialMedia = (type) => {
     if (type === "Github") {
@@ -17,19 +19,30 @@ const HomeSection = () => {
     } else if (type === "Email") {
       window.open("mailto:dimasroger89@gmail.com", "_blank")
     } else {
-      window.open("https://api.whatsapp.com/send?phone=6289627210822&text=Hellow", "_blank")
+      window.open(
+        "https://api.whatsapp.com/send?phone=6289627210822&text=Hellow",
+        "_blank"
+      )
     }
   }
 
+  const { breakpoints, currentBreakpoint } = props
+  const isMobileLS =
+    breakpoints[currentBreakpoint] < breakpoints.mobileLandscape
+
   return (
     <>
-      <div ref={homeRef} className="tw-py-16">
+      <div ref={homeRef} className="md:tw-py-16 tw-py-4">
         <div className="grid-2 tw-gap-4">
-          <div className="tw-text-center">
+          <div className="tw-text-center tw-col-span-2 md:tw-col-span-1">
             <div className="fcc">
-              <Image src={Crown} alt="Crown" height={"40"} />
+              <Image
+                src={Crown}
+                alt="Crown"
+                height={isMobileLS ? "20" : "40"}
+              />
             </div>
-            <div className="font-lilita-one tw-text-[50px] tw-tracking-wider tw-my-5">
+            <div className="font-lilita-one tw-text-[25px] md:tw-text-[50px] tw-tracking-wider tw-my-5">
               <div>Hellow</div>
               <div>I'am Roger</div>
               <div>Front End Developer</div>
@@ -38,9 +51,9 @@ const HomeSection = () => {
               <Button
                 bgColor={"#FF6330"}
                 color={"white"}
-                height={"14"}
-                px={"20"}
-                fontSize={"24px"}
+                height={isMobileLS ? "10" : "14"}
+                px={isMobileLS ? "6em" : "20"}
+                fontSize={isMobileLS ? "12px" : "24px"}
                 letterSpacing={"widest"}
                 _hover={{ bg: "#FF6330", transform: "scale(1.1)" }}
                 _active={{ bg: "#FF6330" }}
@@ -59,20 +72,21 @@ const HomeSection = () => {
                   key={key}
                   src={item.image}
                   alt={item.alt}
-                  height={"10"}
+                  height={isMobileLS ? "8" : "10"}
                   _hover={{ cursor: "pointer", transform: "scale(1.2)" }}
                   onClick={() => routeSocialMedia(item.alt)}
                 />
               ))}
             </div>
           </div>
-          <div>
+          <div className="tw-col-span-2 md:tw-col-span-1">
             <div className="fcc">
               <Image
                 src={HeroRight}
                 objectFit={"contain"}
-                height={"700px"}
+                height={isMobileLS ? "350px" : "700px"}
                 alt="HeroRight"
+                className={isMobileLS ? "tw-rotate-[90deg]" : ""}
               />
             </div>
           </div>
@@ -82,4 +96,4 @@ const HomeSection = () => {
   )
 }
 
-export default HomeSection
+export default withBreakpoints(HomeSection)

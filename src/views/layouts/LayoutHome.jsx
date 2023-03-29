@@ -26,7 +26,7 @@ const LayoutHome = () => {
           contactRef={contactRef}
         />
 
-        <div id="body-content" className="tw-py-6 tw-px-6 ">
+        <div id="body-content" className="tw-py-6 md:tw-px-6 tw-px-4">
           <Outlet context={listRef} />
         </div>
 

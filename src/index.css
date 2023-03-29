@@ -50,24 +50,15 @@ body {
   font-family: "Montserrat-SemiBold";
 }
 
-.title-skill {
-  color: #ff6330;
-  font-family: "Montserrat-Bold";
-  font-size: 40px;
-  letter-spacing: 0.07em;
-  line-height: 1.5;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    4px 4px 0 #000;
+@media only screen and (min-width: 481px) {
+  .text-shadow {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      4px 4px 0 #000;
+  }
 }
-
-.subtitle-skill {
-  font-family: "Montserrat-Bold";
-  font-size: 20px;
-  line-height: 1.25;
-}
-
-.desc-skill {
-  font-family: "Montserrat-Medium";
-  font-size: 16px;
-  white-space: pre-line
+@media only screen and (max-width: 480px) {
+  .text-shadow {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      2.5px 2.5px 0 #000;
+  }
 }
