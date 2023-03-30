@@ -1,22 +1,22 @@
-import CP1 from "assets/images/porto/cp-1.svg"
-import CP2 from "assets/images/porto/cp-2.svg"
+import CP1 from "assets/images/porto/cp-fairy.png"
+import CP2 from "assets/images/porto/cp-mhw.png"
 import CP3 from "assets/images/porto/cp-aap.png"
-import CP4 from "assets/images/porto/cp-4.svg"
-import CP5 from "assets/images/porto/cp-5.svg"
-import CP6 from "assets/images/porto/cp-6.svg"
-import CP7 from "assets/images/porto/cp-7.svg"
-import CP8 from "assets/images/porto/cp-8.svg"
-import CP9 from "assets/images/porto/cp-9.svg"
-import CP10 from "assets/images/porto/cp-10.svg"
-import CP11 from "assets/images/porto/cp-11.svg"
-import CP12 from "assets/images/porto/cp-12.svg"
-import CP13 from "assets/images/porto/cp-13.svg"
-import CP14 from "assets/images/porto/cp-14.svg"
-import CP15 from "assets/images/porto/cp-15.svg"
-import CP16 from "assets/images/porto/cp-16.svg"
-import CP17 from "assets/images/porto/cp-17.svg"
-import CP18 from "assets/images/porto/cp-18.svg"
-import CP19 from "assets/images/porto/cp-19.png"
+import CP4 from "assets/images/porto/cp-warung-app.png"
+import CP5 from "assets/images/porto/cp-buzzer.png"
+import CP6 from "assets/images/porto/cp-pesantren-spp.png"
+import CP7 from "assets/images/porto/cp-pesantren-merchant.png"
+import CP8 from "assets/images/porto/cp-pln.png"
+import CP9 from "assets/images/porto/cp-psb.png"
+import CP10 from "assets/images/porto/cp-sahira.png"
+import CP11 from "assets/images/porto/cp-talenta.png"
+import CP12 from "assets/images/porto/cp-sininis-web.png"
+import CP13 from "assets/images/porto/cp-tribe.png"
+import CP14 from "assets/images/porto/cp-vconex.png"
+import CP15 from "assets/images/porto/cp-wedding.png"
+import CP16 from "assets/images/porto/cp-sininis-caption.png"
+import CP17 from "assets/images/porto/cp-sininis-shop-dashboard.png"
+import CP18 from "assets/images/porto/cp-sininis-shop-web.png"
+import CP19 from "assets/images/porto/cp-lms.png"
 
 const PortofolioAPI = [
   {
@@ -25,22 +25,22 @@ const PortofolioAPI = [
     onBoarding: false
   },
   {
-    alt: "test",
+    alt: "mhw",
     image: CP2,
     onBoarding: false
   },
   {
-    alt: "test",
+    alt: "aap",
     image: CP3,
     onBoarding: false
   },
   {
-    alt: "test",
+    alt: "warung",
     image: CP4,
     onBoarding: false
   },
   {
-    alt: "test",
+    alt: "buzzer",
     image: CP5,
     onBoarding: false
   },
@@ -70,12 +70,12 @@ const PortofolioAPI = [
     onBoarding: true
   },
   {
-    alt: "test",
+    alt: "sininis-talenta",
     image: CP11,
     onBoarding: false
   },
   {
-    alt: "test",
+    alt: "sininis-web",
     image: CP12,
     onBoarding: false
   },
@@ -85,27 +85,27 @@ const PortofolioAPI = [
     onBoarding: true
   },
   {
-    alt: "test",
+    alt: "vconex",
     image: CP14,
     onBoarding: false
   },
   {
-    alt: "test",
+    alt: "wedding-web",
     image: CP15,
     onBoarding: false
   },
   {
-    alt: "test",
+    alt: "sininis-caption",
     image: CP16,
     onBoarding: false
   },
   {
-    alt: "test",
+    alt: "sininis-shop-dashboard",
     image: CP17,
     onBoarding: false
   },
   {
-    alt: "test",
+    alt: "sininis-shop-web",
     image: CP18,
     onBoarding: false
   },
