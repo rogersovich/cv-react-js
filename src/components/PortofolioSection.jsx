@@ -43,7 +43,7 @@ const PortofolioSection = (props) => {
 
         <div className="grid-12 tw-gap-y-10">
           {filterAPI().map((item, key) => (
-            <div className="md:tw-col-start-2 md:tw-col-span-10 tw-col-span-12" key={key}>
+            <div className="lg:tw-col-start-2 lg:tw-col-span-10 2xl:tw-col-start-3 2xl:tw-col-span-8 tw-col-span-12" key={key}>
               <Image
                 src={item.image}
                 objectFit={"contain"}

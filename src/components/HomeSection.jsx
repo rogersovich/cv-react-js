@@ -8,6 +8,11 @@ import { withBreakpoints } from "react-breakpoints"
 
 const HomeSection = (props) => {
   const { homeRef } = useOutletContext()
+
+  const { breakpoints, currentBreakpoint } = props
+  const isMobileLS =
+    breakpoints[currentBreakpoint] < breakpoints.mobileLandscape
+
   const routeSocialMedia = (type) => {
     if (type === "Github") {
       window.open("https://github.com/rogersovich", "_blank")
@@ -26,9 +31,12 @@ const HomeSection = (props) => {
     }
   }
 
-  const { breakpoints, currentBreakpoint } = props
-  const isMobileLS =
-    breakpoints[currentBreakpoint] < breakpoints.mobileLandscape
+  const getMyCV = () => {
+    window.open(
+      "https://drive.google.com/file/d/1ROsQ_p49PH7bHEzLEvV492D43YJNDLR-/view?usp=sharing",
+      "_blank"
+    )
+  }
 
   return (
     <>
@@ -60,9 +68,10 @@ const HomeSection = (props) => {
                 border={"2px"}
                 borderColor={"black"}
                 boxShadow={"4px 4px 0px #000000"}
-                className="upper font-montserrat-bold"
+                className="capital font-montserrat-bold"
+                onClick={getMyCV}
               >
-                hire me
+                Get My CV
               </Button>
             </div>
             <br />

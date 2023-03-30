@@ -14,6 +14,7 @@ import "./assets/fonts/Montserrat-Medium.ttf"
 // break points
 import ReactBreakpoints from "react-breakpoints"
 
+
 const breakpoints = {
   mobile: 320,
   mobileLandscape: 480,
