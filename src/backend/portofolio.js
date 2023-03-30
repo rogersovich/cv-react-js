@@ -1,6 +1,6 @@
 import CP1 from "assets/images/porto/cp-1.svg"
 import CP2 from "assets/images/porto/cp-2.svg"
-import CP3 from "assets/images/porto/cp-3.svg"
+import CP3 from "assets/images/porto/cp-aap.png"
 import CP4 from "assets/images/porto/cp-4.svg"
 import CP5 from "assets/images/porto/cp-5.svg"
 import CP6 from "assets/images/porto/cp-6.svg"
@@ -16,7 +16,7 @@ import CP15 from "assets/images/porto/cp-15.svg"
 import CP16 from "assets/images/porto/cp-16.svg"
 import CP17 from "assets/images/porto/cp-17.svg"
 import CP18 from "assets/images/porto/cp-18.svg"
-import CP19 from "assets/images/porto/cp-ssss.png"
+import CP19 from "assets/images/porto/cp-19.png"
 
 const PortofolioAPI = [
   {
