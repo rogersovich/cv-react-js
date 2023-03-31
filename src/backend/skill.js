@@ -18,13 +18,13 @@ const SkillAPI = [
     name: "Next JS",
     level: 3,
     desc: 'Menguasai dasar-dasar Next.js seperti routing, SSR (server-side rendering), dan API routing. \n\n Memiliki kemampuan untuk membangun aplikasi web yang responsif dan mobile-friendly menggunakan Next.js.',
-    image: Kodok
+    image: Bunga
   },
   {
     name: "Vue JS",
     level: 6,
     desc: 'Memiliki pemahaman yang kuat tentang Vue.js, termasuk konsep-konsep dasar, pembuatan komponen, manajemen state, routing, dan lainnya. \n\n Mampu menggunakan Vue.js untuk mengembangkan aplikasi web yang kompleks dengan fitur seperti integrasi API, autentikasi pengguna, penggunaan library eksternal, dan sebagainya.',
-    image: Bunga
+    image: Kodok
   },
   {
     name: "Nuxt JS",
@@ -42,13 +42,25 @@ const SkillAPI = [
     name: "Photoshop",
     level: 4,
     desc: 'Memiliki kemampuan dalam mengedit gambar dan membuat desain sederhana dengan menggunakan software Photoshop.',
-    image: Kodok
+    image: Bunga
   },
   {
     name: "Mysql",
     level: 3,
     desc: 'Memiliki kemampuan dalam mengelola dan memanipulasi database MySQL serta mampu membuat query sederhana.',
+    image: Kodok
+  },
+  {
+    name: "TypeScript",
+    level: 3,
+    desc: 'Menguasai dasar-dasar Typescript',
     image: Bunga
+  },
+  {
+    name: "Redux",
+    level: 3,
+    desc: 'Menguasai dasar-dasar Redux seperti store, dispatch dan actions. menguasai reduxt persist state untuk local storage',
+    image: Kodok
   },
 ]
 
