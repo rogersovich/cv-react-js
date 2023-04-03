@@ -33,7 +33,7 @@ const HomeSection = (props) => {
 
   const getMyCV = () => {
     window.open(
-      "https://drive.google.com/file/d/1ROsQ_p49PH7bHEzLEvV492D43YJNDLR-/view?usp=sharing",
+      "https://drive.google.com/file/d/14k-N2XqxXyTIjF055wmpMacMVtCQCydN/view?usp=sharing",
       "_blank"
     )
   }
